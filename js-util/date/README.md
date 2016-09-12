@@ -21,7 +21,12 @@
 # date-util.js
 * 自己实现的一些 日期相关函数
 * date = new Date();
-* console.log(date.defaultTime());
+* date.pattern("yyyy-MM-dd HH:mm:ss")  // 格式化
+* date.defaultTime(); // yyyy-MM-dd HH:mm:ss
+* date.defaultTimestamp(); // yyyy-MM-dd HH:mm:ss.S
+* date.defaultDate()  // yyyy-MM-dd
+* date.defaultDateDot()  // yyyy.MM.dd
+
 
 
 # [datejs](https://github.com/datejs/Datejs)
