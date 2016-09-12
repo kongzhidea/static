@@ -1,4 +1,4 @@
-#### [Date](http://www.runoob.com/js/js-obj-date.html)
+# [Date](http://www.runoob.com/js/js-obj-date.html)
 * date = new Date() // 当前时间
 * date = new Date(year,month,day)  // 指定年月日
 * getTime() 返回从 1970 年 1 月 1 日至今的毫秒数   unix时间戳，精确到 毫秒
@@ -18,13 +18,13 @@
 * setTime() 改变完整的时间
 * setFullYear() 设置具体的日期。
 
-#### date-util.js
+# date-util.js
 * 自己实现的一些 日期相关函数
 * date = new Date();
 * console.log(date.defaultTime());
 
 
-#### [datejs](https://github.com/datejs/Datejs)
+# [datejs](https://github.com/datejs/Datejs)
 * 详见 datajs下的md
 * 格式化
     * data.toString("yyyy-MM-dd HH:mm:ss")， data.toString("yyyy-MM-dd")
@@ -64,7 +64,7 @@
     * date1.equals(date2)，或者 Date.equals(date1,date2)    // true|false
 
 
-#### [moment](http://momentjs.cn/docs/)
+# [moment](http://momentjs.cn/docs/)
 * moment 格式化 占位符和通用的占位符不一样
     * YYYY/YY	4 or 2 digit year
     * MM  month
