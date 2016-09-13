@@ -19,7 +19,12 @@
 * toString()	返回字符串对象值
 * toUpperCase()	把字符串转换为大写
 * trim()	移除字符串首尾空白
-
+* String.replace( ) 的简单用法
+    * var text = "javascript 非常强大 ！";
+    * text.replace(/javascript/i, "JavaScript"); // 返回：JavaScript 非常强大 ！
+* String.replace( ) 替换所有出现的目标字符
+    * var text= "javascript 非常强大 ！JAVASCRIPT 是我最喜欢的一门语言 ！";
+    * text.replace(/javascript/ig, "JavaScript"); // 返回：JavaScript 非常强大 ！JavaScript 是我最喜欢的一门语言 ！
 
 
 # [string-js](https://github.com/jprichardson/string.js)
