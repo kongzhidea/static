@@ -1,4 +1,4 @@
-is.js
+[is.js](https://github.com/scottrabin/is-js)
 =====
 
 
