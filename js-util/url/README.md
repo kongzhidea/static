@@ -10,6 +10,8 @@
     * 当前url的hostname，如 www.kk.com
 * url("hostname",url)
     * url的hostname
+* url("path")，url("path",url)
+    * 返回路径，如 /test
 * url("query"), url("query",url)
     * url的参数，如"a=1&b=%e5%ad%94%e6%99%ba%e6%85%a7"， 不包含锚点
 * url('?');
