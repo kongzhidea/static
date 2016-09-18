@@ -23,13 +23,6 @@
         * 如果要设置内容，则加上参数即可，如 text(val)
     * 获取属性  -  attr()，如 attr("data-id")
     * 设置属性  -  attr()，如 attr("data-id",val)
-* [事件](http://www.runoob.com/jquery/jquery-ref-events.html)
-    * 鼠标事件	  |  键盘事件	  | 表单事件	| 文档/窗口事件
-    * click	      |  keypress | submit	| load
-    * dblclick	  |  keydown  |	change	| resize
-    * mouseenter  |	keyup	  | focus	| scroll
-    * mouseleave  |	blur	  | unload
-    * 样例：$("p").click(function(){$(this).hide();});
 * [效果](http://www.runoob.com/jquery/jquery-ref-effects.html)
     * hide() 和 show() 方法来隐藏和显示 HTML 元素， 参数可以控制隐藏/显示的时间，毫秒
     * toggle() 方法来切换 hide() 和 show() 方法。
@@ -58,7 +51,31 @@
     * $.getJSON()	[使用 HTTP GET 请求从服务器加载 JSON 编码的数据](http://www.runoob.com/jquery/ajax-getjson.html)
     * $.post()	[使用 AJAX 的 HTTP POST 请求从服务器加载数据](http://www.runoob.com/jquery/ajax-post.html)
 * [jsonp](http://www.runoob.com/json/json-jsonp.html
-    *
+* [事件](http://www.runoob.com/jquery/jquery-ref-events.html)
+    * 鼠标事件	  |  键盘事件	  | 表单事件	| 文档/窗口事件
+    * click	      |  keypress | submit	| load
+    * dblclick	  |  keydown  |	change	| resize
+    * mouseenter  |	keyup	  | focus	| scroll
+    * mouseleave  |	blur	  | unload
+    * 样例：$("p").click(function(){$(this).hide();});
+* 绑定click事件：$("#id").click(function () {});
+* 模拟调用 click事件，$("#id").click()
+* 绑定事件 -- on()：$("#id").on("click",function () {});
+* 取消绑定事件 -- off()： $("#id").off("click");
+* 绑定事件-- bind():
+    * $(selector).bind(event,data,function)
+    * data 可选,event,function必填
+* e.preventDefault(); 阻止默认事件
+    * 例如("a").click(function(e){});  如果没有e.preventDefault()，那么在执行完click方法后，会继续页面跳转，除非 href="javascript:void(0);"
+* 表单提交事件：
+    * $('.time_form').bind('submit',function(e){
+             e.preventDefault(); // 阻止默认事件，表单提交后R页面跳转
+             $.get('',function(){  })
+        })
+* delegate
+    * 为所有匹配选择器（selector参数）的元素绑定一个或多个事件处理函数，基于一个指定的根元素的子集，匹配的元素包括那些目前已经匹配到的元素，也包括那些今后可能匹配到的元素。
+    * .delegate( selector, eventType, handler(eventObject) )
+    * 如：$("table").delegate("td", "click", function() { });
 
 ajax样例:
 ```
@@ -92,4 +109,13 @@ $.ajax({
          alert('fail');
      }
  });
+```
+js 是顺序执行，如果js想调用后面的dom元素，需要在document加载完毕后才可以调用
+```
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#id").click(function  () {
+
+	});
+});
 ```

@@ -20,7 +20,19 @@
 </style>
 
 <script type="text/javascript">
+$(document).ready(function(){
+	$("#sp").click(function  () {
+		alert($("#age").val());
+	});
+	// $("#sp").on("click",function  () {
+	// 	alert($("#age").val());
+	// });
 
+	$("a").click(function(event){
+	    // event.preventDefault();
+		alert("aa");
+	});
+});
 
 
 </script>
@@ -29,6 +41,9 @@
 <body>
 <span id="sp" class="fr">sp</span>
 <input id="age" title="We ask for your age only for statistical purposes.">
+
+<a href="javascript:void(0);">W3School</a>
+
 </body>
 
 </html>
