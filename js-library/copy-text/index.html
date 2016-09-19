@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>关于</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+ </head>
+ <body >
+<div id="top-title" >
+    <input type="text" value="12345" id="text" >
+</div>
+<button id="but" type="button" >点击复制</button>
+
+<script>
+	$("#but").on('click',function(){
+	        var e=document.getElementById("text");//对象是content
+	        e.select(); //选择对象
+	        document.execCommand("Copy"); //执行浏览器复制命令
+	        alert("复制成功");
+	    });
+</script>
+</body>
+</html>
+
