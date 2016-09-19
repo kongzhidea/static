@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>jQuery可搜索下拉框插件</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.combo.select.js"></script>
+    <link rel="stylesheet" href="css/combo.select.css">
+
+
+ </head>
+ <body >
+<div class="dowebok">
+	<select id="month" name="month" class="comboSelect">
+		<option selected value="">请选择</option>
+		<option value="1">一月</option>
+		<option value="2">二月</option>
+	</select>
+</div>
+
+<h1>分组</h1>
+
+<div class="dowebok">
+	<select class="comboSelectGroup" id="city">
+		<option value="">城市</option>
+
+		<optgroup label="广东省">
+			<option value="深圳">深圳</option>
+			<option value="广州">广州</option>
+			<option value="珠海">珠海</option>
+			<option value="惠州">惠州</option>
+		</optgroup>
+
+		<optgroup label="湖南省">
+			<option value="长沙">长沙</option>
+			<option value="株洲">株洲</option>
+			<option value="岳阳">岳阳</option>
+			<option value="张家界">张家界</option>
+		</optgroup>
+
+		<optgroup label="江西省">
+			<option value="南昌">南昌</option>
+			<option value="赣州">赣州</option>
+			<option value="宜春">宜春</option>
+			<option value="九江">九江</option>
+		</optgroup>
+	</select>
+</div>
+
+
+
+<script type="text/javascript">
+$(".comboSelect").comboSelect();
+$(".comboSelectGroup").comboSelect();
+
+$('.comboSelect').change(function() {
+		console.log($(".comboSelect").val());
+		console.log($(".comboSelect").find("option:selected").text());
+});
+
+</script>
+</body>
+</html>
+
