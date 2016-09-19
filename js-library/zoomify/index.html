@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>图片缩放</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/zoomify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/zoomify.min.css" />
+    <style type="text/css">
+    	.zoomify{
+    		width: 100px;
+    		height: 100px;
+    	}
+    </style>
+ </head>
+ <body >
+<img class="zoomify" src="images/img1.jpg" alt="" data-duration="2000" data-easing="linear" data-scale="0.8" >
+
+<script type="text/javascript">
+$(function() {
+	$('.zoomify').zoomify();
+});
+</script>
+</body>
+</html>
+
