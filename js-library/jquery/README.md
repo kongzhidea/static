@@ -1,3 +1,7 @@
+# fun.js， 不依赖jquery实现一些基础功能
+* 封装根据id，class找到dom元素，添加/删除class，添加事件，ajax，
+* 如：removeClass(document.querySelector('#id'),"clas")
+
 # jquery
 * 教程:http://www.runoob.com/jquery/jquery-tutorial.html
 * 教程:http://www.w3school.com.cn/js/
@@ -14,8 +18,11 @@
 * 选择器
     * id选择器
         * 通过HTML元素的id属性选取指定的元素。如$("#id")
+	* document.getElementById("id")
+	* document.querySelector('#id')
     * class选择器
         * 寻找指定的class对应的元素，如：$(".test")
+	* document.querySelector('.test')
 * 内容获取、设置
     * 获得内容
         * text() - 设置或返回所选元素的文本内容
