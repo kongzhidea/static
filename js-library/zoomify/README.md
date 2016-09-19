@@ -18,6 +18,5 @@ $('.zoomify').zoomify();
 ```
 名称	类型	默认值	说明
 duration	整数	200	动画持续时间
-easing	字符串	linear	动画持续时间
 scale	整数/浮点数	0.9	图片最大缩放比例
 ```
