@@ -1,0 +1,28 @@
+/* 回到顶部*/
+.gotoTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+
+.gotoTop a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: url(http://s.xnimg.cn/nx/newsfeed/res/back_to_top_1.png) no-repeat;
+    background-color: #a4aab4;
+    background-color: rgba(164,170,180,0.5);
+    *background-color: #a4aab4;
+    filter: alpha(opacity=50);
+    background-position: 16px 19px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+.gotoTop a:hover {
+    background-color: #3d96dc;
+}

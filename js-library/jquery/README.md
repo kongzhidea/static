@@ -4,6 +4,7 @@
 * link：
     * 百度：http://libs.baidu.com/jquery/2.0.0/jquery.min.js
     * 新浪：http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js
+    * 官方：http://code.jquery.com/jquery-1.9.1.min.js
 
 ```
 <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
