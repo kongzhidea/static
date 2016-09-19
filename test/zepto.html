@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+
+<script type="text/javascript" src="/js-library/zepto/zepto.js"></script>
+
+<style type="text/css">
+.fr{
+	color:red;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#sp").click(function  () {
+		alert($("#age").val());
+	});
+	// $("#sp").on("click",function  () {
+	// 	alert($("#age").val());
+	// });
+
+	$("a").click(function(event){
+	    // event.preventDefault();
+		alert("aa");
+	});
+});
+
+
+</script>
+</head>
+
+<body>
+<span id="sp" class="fr">sp</span>
+<input id="age" title="We ask for your age only for statistical purposes.">
+
+<a href="javascript:void(0);">W3School</a>
+
+</body>
+
+</html>
+
