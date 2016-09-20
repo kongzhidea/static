@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+
+<style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }
+
+  </style>
+<script>
+$(function() {
+	    $( "#draggable" ).draggable();
+
+	     $( "#sortable" ).sortable();
+
+var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: function(request, response) {
+      			console.log("request.term=" + request.term);
+      			// ajax
+                response(["java1","java2"]); // 如果是数组，则label=value
+            },
+　　　　select: function(event, ui) {
+            //提交搜索...
+            console.dir("ui.item=" + ui.item.label + "," + ui.item.value);
+        },
+       minLength: 1,
+       delay:100,
+       autoFocus:false
+    });
+
+    $( document ).tooltip();
+
+});
+</script>
+</head>
+<body>
+ 
+<div id="draggable" class="ui-widget-content">
+  <p>请拖动我！</p>
+</div>
+ 
+ <ul id="sortable">
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+  <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+<div>
+	tags:<input id="tags">
+</div>
+
+<div>
+	<span title="sage">age</span>:<input id="age" title="年龄仅用于统计。">
+</div>
+</body>
+</html>
+

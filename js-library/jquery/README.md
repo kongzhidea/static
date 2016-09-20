@@ -127,3 +127,8 @@ $(document).ready(function(){
 	});
 });
 ```
+或者
+```
+$(function() {
+});
+```
