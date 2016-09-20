@@ -3,6 +3,7 @@
 * 如：removeClass(document.querySelector('#id'),"clas")
 
 ## bootbox  提示框,alert等
+## confirm, 提示框，alert等
 ## cookie操作
 ## toastr 通知
 ## jquery-ui
