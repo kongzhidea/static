@@ -67,7 +67,7 @@ $( "#dialog-message" ).dialog({
     * $( "#progressbar" ).progressbar({value: 37});
 * [工具提示框 Tooltip](http://www.runoob.com/jqueryui/example-tooltip.html), title字段
     *  $( document ).tooltip();
-*     
+*
 
 
 
