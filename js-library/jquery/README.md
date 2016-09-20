@@ -2,6 +2,12 @@
 * 封装根据id，class找到dom元素，添加/删除class，添加事件，ajax，
 * 如：removeClass(document.querySelector('#id'),"clas")
 
+## bootbox  提示框,alert等
+## cookie操作
+## toastr 通知
+## jquery-ui
+* 一些常见UI，如dialog,progress,按钮，自动补全等
+
 # jquery
 * 教程:http://www.runoob.com/jquery/jquery-tutorial.html
 * 教程:http://www.w3school.com.cn/js/
