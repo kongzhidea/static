@@ -1,4 +1,4 @@
-# Bootbox  提示框
+# [Bootbox  提示框](http://bootboxjs.com/)
 * 依赖 jquery,bootstrap
 
 ```
