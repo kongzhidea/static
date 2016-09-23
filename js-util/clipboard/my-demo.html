@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+    <title>复制文本</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="http://s.ebaoyang.cn/mobile/release/script/zepto2.js"></script>
+ </head>
+ <body >
+<div id="top-title" >
+    <input type="text" value="12345" id="awardQqQun1" readonly="readonly">
+</div>
+<button id="qqQunCopyBtn1" type="button" >点击复制</button>
+<script>
+$("#qqQunCopyBtn1").on('click',function(){
+        var e=document.getElementById("awardQqQun1");//对象是content
+        e.select(); //选择对象
+        document.execCommand("Copy"); //执行浏览器复制命令
+        alert("复制成功");
+    });
+</script>
+ </body>
+</html>
