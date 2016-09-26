@@ -133,6 +133,7 @@ $(document).ready(function(){
 
 	});
 });
+</script>
 ```
 或者
 ```
