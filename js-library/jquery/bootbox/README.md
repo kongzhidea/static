@@ -61,7 +61,6 @@ bootbox.prompt({
 ```
 
 # dialog 自定义弹窗
-* dialog可以有3个按钮，分别为 success,danger, main， 可选参数，也可以都不设置
 * title为弹窗标题
 * message为弹窗内容
 ```
