@@ -93,3 +93,25 @@ bootbox.dialog({
     }
 });
 ```
+```
+bootbox.dialog({  
+message: "I am a custom confirm",  
+title: "Confirm title",  
+buttons: {  
+    Cancel: {  
+	label: "Cancel",  
+	className: "btn-default",  
+	callback: function () {  
+	    
+	}  
+    }  
+    , OK: {  
+	label: "OK",  
+	className: "btn-primary",  
+	callback: function () {  
+	     
+	}  
+    }  
+}  
+});  
+```
