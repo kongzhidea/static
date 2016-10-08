@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta charset="UTF-8" />
+
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/feedBackPop.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/feedBackPop.css" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#bt1").click(function(event){
+	    event.preventDefault();
+		$.feedBackPop("弹窗内容!");
+	});
+});
+
+
+</script>
+</head>
+
+<body>
+<div>
+    11111
+</div>
+<button id="bt1">点击显示弹窗</button>
+
+
+
+</body>
+
+</html>
+
