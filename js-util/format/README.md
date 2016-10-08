@@ -8,6 +8,7 @@
 
 
 # [format.js](https://github.com/davidchambers/string-format)  推荐使用
+* http://cdn.bootcss.com/string-format/0.5.0/string-format.js
 * 如果要展示  {}, 则可以 使用 {{}}进行 转义
 * 调用方式1：
     * x  ={"id":1,"name":"kk"}
