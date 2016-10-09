@@ -613,7 +613,7 @@ $(document).ready(function(){
 		e.value = url;
 		e.select(); //选择对象
         document.execCommand("Copy"); //执行浏览器复制命令
-		$.feedBackPop("复制成功");
+		$.feedBackPop("生成链接成功");
 	});
 });
 
