@@ -1,8 +1,6 @@
 # my-demo.html
 * 原生js，点击复制文本
 
-# 直接使用 copy函数,如 copy(val)
-
 # [clipboard.js](https://github.com/zenorocha/clipboard.js)
 * function-text.html
     * 点击button 复制文本，文本在js中定义，text字段定义
