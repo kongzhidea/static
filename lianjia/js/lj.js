@@ -461,6 +461,9 @@ $(document).ready(function(){
 		shoufuBiliAndPutongShow(); //首付
 		zhongjiefeiShow();// 中介费
 		calcShowFuShow(); // 计算首付
+
+		// 清空link
+		$("#link").val("");
 		_log();
 	}
 
