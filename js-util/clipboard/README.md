@@ -1,5 +1,7 @@
 # my-demo.html
-* 原声js，点击复制文本
+* 原生js，点击复制文本
+
+# 直接使用 copy函数,如 copy(val)
 
 # [clipboard.js](https://github.com/zenorocha/clipboard.js)
 * function-text.html
