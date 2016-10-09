@@ -12,3 +12,20 @@
     * 文本由target字段指定，可以根据id返回dom元祖的内容
 * button中 data-clipboard-text
     * 设置点击自身复制内容
+
+```
+var btn = document.querySelector('.copyLink');
+var clipboard = new Clipboard(btn);
+clipboard.resolveOptions( {
+	text: function() {
+	    return 'dd';
+	}
+});
+clipboard.on('success', function(e) {
+	console.log(e);
+});
+
+clipboard.on('error', function(e) {
+	console.log(e);
+});
+```
