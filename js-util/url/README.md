@@ -23,3 +23,20 @@
 * url("#param"),url("#param",url)
     * 具体参数，如 url("#list")  => ""
 
+
+# 原生方法
+```
+thisURL = document.URL;     // http://localhost:81/Test/1.htm?Did=123
+thisHREF = document.location.href; // http://localhost:81/Test/1.htm?Did=123
+thisSLoc = self.location.href;   // http://localhost:81/Test/1.htm?Did=123
+thisDLoc = document.location;   // http://localhost:81/Test/1.htm?Did=123
+
+thisTLoc = top.location.href;   // http://localhost:81/Test/1.htm?Did=123
+thisPLoc = parent.document.location;// http://localhost:81/Test/1.htm?Did=123
+thisTHost = top.location.hostname; // localhost
+thisHost = location.hostname;   // localhost
+
+thisU1 = window.location.protocol; // http:
+thisU2 = window.location.host;   // localhost:81
+thisU3 = window.location.pathname; // /Test/1.htm
+```
