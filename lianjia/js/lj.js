@@ -349,10 +349,12 @@ $(document).ready(function(){
 	// 展示首付比例，以及是否是普通住宅
 	function shoufuBiliAndPutongShow(){
 		var shoufuBili = getShoufuBili();
-		if(!isNaN(shoufuBili)){
-			$("#shoufuBiliShow").html(shoufuBili);
+		if(isNaN(shoufuBili)){
+			$("#shoufuBiliShow").html("");
+			$("#putongZhuzhaiShow").html("");
 			return "";
 		}
+		$("#shoufuBiliShow").html(shoufuBili);
 		
 
 		// 总价
@@ -432,11 +434,8 @@ $(document).ready(function(){
 			return;
 		}
 
-		// 贷款首付
-		var daikuan_shoufu = wangqianjia * shoufuBili;
-
 		// 贷款
-		var daikuan = price - daikuan_shoufu;
+		var daikuan = wangqianjia * (1-shoufuBili);
 
 		// 单纯首付
 		var shoufu = price - daikuan;
