@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>北京二手房计算器</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta charset="UTF-8" />
+<meta name="keywords" content="北京" />
+<meta name="description" content="" />
+
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<link rel="stylesheet" type="text/css" href="css/lj.css" />
+<link rel="stylesheet" type="text/css" href="css/feedBackPop.css" />
+
+
+
+
+<body>
+	
+<div class="activityBox">
+		<div id="header" class="header">
+			<p>北京二手房计算器</p>
+			<a href="javascript:history.go(-1)" class="backto"></a>
+		</div>
+	
+	<div class="wrapper" >
+		<div class="contentBox" style="border-top:none;">
+			<div class="act_title">
+				<label for="totalPrice">总房价(万)：</label>
+				<input type="text" placeholder="房价总值，单位为万" class="inputReal70"  id="totalPrice">
+			</div>
+
+			<div class="act_title">
+				<label for="pinggu_per">评估值 :</label>
+				<select id="pinggu_per" class="selectReal">
+					<option value="1">100%</option>
+					<option value="0.99">99%</option>
+					<option value="0.98">98%</option>
+					<option value="0.97">97%</option>
+					<option value="0.96">96%</option>
+					<option value="0.95">95%</option>
+					<option value="0.94">94%</option>
+					<option value="0.93">93%</option>
+					<option value="0.92">92%</option>
+					<option value="0.91">91%</option>
+					<option value="0.9" selected="selected">90%</option>
+					<option value="0.89">89%</option>
+					<option value="0.88">88%</option>
+					<option value="0.87">87%</option>
+					<option value="0.86">86%</option>
+					<option value="0.85">85%</option>
+					<option value="0.84">84%</option>
+					<option value="0.83">83%</option>
+					<option value="0.82">82%</option>
+					<option value="0.81">81%</option>
+					<option value="0.80">80%</option>
+				</select>
+				<span id="pinggu_show"></span>
+			</div>
+			<div class="act_title">
+				<label for="mianji">房屋面积(米<sup>2</sup>)：</label>
+				<input type="text" placeholder="房本面积" class="inputReal60"  id="mianji">
+			</div>
+			<div class="act_title">
+				<label for="yuanzhi">房屋原值（万）：</label>
+				<input type="text" placeholder="原购房网签价" class="inputReal60"  id="yuanzhi">
+			</div>
+			<div class="act_title">
+				<label for="fang_nianxian">房产购置年限 :</label>
+				<select id="fang_nianxian" class="selectReal">
+					<option value="1">满五唯一</option>
+					<option value="2">满二唯一</option>
+					<option value="3">满五不唯一</option>
+					<option value="4">不满二</option>
+				</select>
+				<span id="fang_qingkuang_show"></span>
+			</div>
+			<div class="act_title hide" id="containShuiDiv">
+				<span >卖方包税 :</span>
+				<a class="chooseBtn containShui chooseBtnActived" id="bubaoshui">不包税</a>
+				<a class="chooseBtn containShui" id="baoshui" >包税</a>
+			</div>
+			<div class="act_title" id="shoutaoDiv">
+				<span >买方情况 :</span>
+				<a class="chooseBtn shoutao chooseBtnActived" id="shoutao">首套</a>
+				<a class="chooseBtn shoutao" id="feishoutao" >非首套</a>
+			</div>
+			<div class="act_title" >
+				<span >首付比例 :</span>
+				<span id="shoufuBiliShow"></span>
+				<span style="margin-left:20px;">普通住宅 :</span>
+				<span id="putongZhuzhaiShow"></span>
+			</div>
+			<div class="act_title">
+				<label for="zhongjiefei">中介费 :</label>
+				<select id="zhongjiefei" class="selectReal">
+					<option value="0.027">2.7%</option>
+					<option value="0.026">2.6%</option>
+					<option value="0.025">2.5%</option>
+					<option value="0.024">2.4%</option>
+					<option value="0.023">2.3%</option>
+					<option value="0.022">2.2%</option>
+					<option value="0.021">2.1%</option>
+					<option value="0.020">2.0%</option>
+					<option value="0.019">1.9%</option>
+					<option value="0.018">1.8%</option>
+					<option value="0.017">1.7%</option>
+				</select>
+				<span id="zhongjiefei_show"></span>
+			</div>
+			<div class="act_title" >
+				<span ></span>
+				<span id="showfu_show"></span>
+			</div>
+			<div class="act_title" >
+				<span ></span>
+				<span id="daikuan_show"></span>
+			</div>
+		</div>
+		
+		<div style="margin-top:1000000px;">
+			<input id="link" >
+		</div>
+	    <div class="nextWrap">
+	        <a href="javascript:void(0);" class="fl nextBtn copyLink">复制链接</a>
+	    </div>
+	</div>
+</div>
+	
+
+</body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/string-format/0.5.0/string-format.js"></script>
+<script type="text/javascript" src="js/feedBackPop.js"></script>
+<script type="text/javascript" src="js/lj.js"></script>
+</html>
