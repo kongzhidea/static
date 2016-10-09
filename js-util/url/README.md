@@ -40,3 +40,14 @@ thisU1 = window.location.protocol; // http:
 thisU2 = window.location.host;   // localhost:81
 thisU3 = window.location.pathname; // /Test/1.htm
 ```
+
+```
+//ajax函数 封装
+  function json2url(json){
+    var arr = [];
+    for(var name in json){
+      arr.push(name+'='+encodeURIComponent(json[name]));
+    }
+    return arr.join('&');
+  }
+```
