@@ -349,7 +349,11 @@ $(document).ready(function(){
 	// 展示首付比例，以及是否是普通住宅
 	function shoufuBiliAndPutongShow(){
 		var shoufuBili = getShoufuBili();
-		$("#shoufuBiliShow").html(shoufuBili);
+		if(!isNaN(shoufuBili)){
+			$("#shoufuBiliShow").html(shoufuBili);
+			return "";
+		}
+		
 
 		// 总价
 		var price = checkAndGetTotalPrice();
