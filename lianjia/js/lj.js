@@ -118,6 +118,15 @@ $(document).ready(function(){
     	return true;
     }
 
+    // 是否经适房
+    function isJingjiFang(){
+    	var ret = $(".fangwuXingzhi.chooseBtnActived").html();
+    	if(ret == "商品房"){
+    		return false;
+    	}
+    	return true;
+    }
+
     // 原值
     function getYuanzhi(){
     	return $("#yuanzhi").val().trim();
@@ -253,7 +262,7 @@ $(document).ready(function(){
     	return (wangqianjia -zengzhishui) * per;
     }
 
-    // 计算契税，营业税，个税
+    // 计算契税，营业税，个税, 综合地价款
     function calcShui(){
 		var price = checkAndGetTotalPrice();
 		if(isNaN(price)){
@@ -298,6 +307,18 @@ $(document).ready(function(){
 		}
 
 		$_show.html(ret);
+
+		// 综合地价款
+		var dijiakuan = 0;
+		// 经适房
+		if(isJingjiFang()){
+			dijiakuan = wangqianjia * 0.1;
+		}
+		if(dijiakuan > 0){
+			$("#dijaikuan_show").html(format("综合地价款:{}万", toDecimal(dijiakuan)));
+		}else{
+			$("#dijaikuan_show").html("");
+		}
 	}
 
 	//是否展示 卖方包税情况   TODO
@@ -421,6 +442,13 @@ $(document).ready(function(){
 			return;
 		}
 
+		// 综合地价款
+		var dijiakuan = 0;
+		// 经适房
+		if(isJingjiFang()){
+			dijiakuan = wangqianjia * 0.1;
+		}
+
 		// 中介费
 		var zhongjiefei = calcZhongjiefei();
 
@@ -444,7 +472,7 @@ $(document).ready(function(){
 		var shoufu_total = shoufu + zhongjiefei + qishui;
 
 		if(!isBaoshui()){
-			shoufu_total = shoufu_total + zengzhishui + geshui;
+			shoufu_total = shoufu_total + zengzhishui + geshui + dijiakuan;
 		}
 
 		$("#showfu_show").html(format("首付：{}万，首付含中介费、税：{}万",toDecimal(shoufu),toDecimal(shoufu_total)));
@@ -515,6 +543,20 @@ $(document).ready(function(){
 	    calcTotal();
 	});
 
+	// 商品房
+	$("#feijingjifang").bind('click', function() {
+	    $("#feijingjifang").addClass("chooseBtnActived");
+	    $("#jingjifang").removeClass("chooseBtnActived");
+	    calcTotal();
+	});
+
+	// 经适房
+	$("#jingjifang").bind('click', function() {
+	    $("#jingjifang").addClass("chooseBtnActived");
+	    $("#feijingjifang").removeClass("chooseBtnActived");
+	    calcTotal();
+	});
+
 	// 中介费
 	$("#zhongjiefei").change(calcTotal);
 
@@ -575,6 +617,17 @@ $(document).ready(function(){
 			}
 		}
 
+		var jingshifang = cutOffStr("jingshifang");
+		if(jingshifang != null && jingshifang != ""){
+			if(jingshifang == 1){
+				$("#jingjifang").addClass("chooseBtnActived");
+	    		$("#feijingjifang").removeClass("chooseBtnActived");
+			}else{
+				$("#feijingjifang").addClass("chooseBtnActived");
+	   			$("#jingjifang").removeClass("chooseBtnActived");
+			}
+		}
+
 		var zhongjiefei = cutOffStr("zhongjiefei");
 		if(zhongjiefei != null && zhongjiefei != ""){
 			$("#zhongjiefei").val(zhongjiefei);
@@ -604,6 +657,12 @@ $(document).ready(function(){
 			params["yuanzhi"] = yuanzhi;
 		}
 		params["nianxian"] = $("#fang_nianxian").val();
+
+		if(isJingjiFang()){
+			params["jingshifang"] = 1;
+		}else{
+			params["jingshifang"] = 0;
+		}
 
 		if(isShoutao()){
 			params["shoutao"] = 1;
