@@ -196,7 +196,7 @@ $(document).ready(function(){
 				// 原值
 				var yuanzhi = checkAndGetYuanzhi();
 				if(isNaN(yuanzhi)){
-					$("#pinggu_show").html(yuanzhi);
+					$("#fang_qingkuang_show").html(yuanzhi);
 					return yuanzhi;
 				}
 
@@ -232,7 +232,7 @@ $(document).ready(function(){
 		// 原值
 		var yuanzhi = checkAndGetYuanzhi();
 		if(isNaN(yuanzhi)){
-			$("#pinggu_show").html(yuanzhi);
+			$("#fang_qingkuang_show").html(yuanzhi);
 			return yuanzhi;
 		}
 		
