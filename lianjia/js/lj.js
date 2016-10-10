@@ -29,6 +29,7 @@ $(document).ready(function(){
     	$("#putongZhuzhaiShow").html("");
     	$("#showfu_show").html("");
 		$("#daikuan_show").html("");
+		$("#dijaikuan_show").html("");
     }
 
     // 总价
