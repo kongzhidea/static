@@ -7,3 +7,4 @@
     * http://www.bootcdn.cn/
 
 ## [北京二手房计算器](https://kongzhidea.github.io/static/lianjia/index.html)
+## [生成二维码](https://kongzhidea.github.io/static/qrcode/)
