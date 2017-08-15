@@ -1,7 +1,9 @@
 # WdatePicker
 
 ```
-<input id="date1" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-09-05 12:22:36">
+<script src="https://kongzhidea.github.io/static/js-library/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+
+<input id="date1" class="Wdate" nfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-09-05 12:22:36">
 ```
 ```
 $('body').delegate('#date1', 'focus', function() {
