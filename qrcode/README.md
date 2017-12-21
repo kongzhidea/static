@@ -10,3 +10,13 @@ javascript:void (function (d) {var t=d.createElement('script');t.type='text/java
 Chrome/Safari(win) 的热键是 ctrl-shift-B
 Chrome/Safari(mac) 的热键是 command-shift-B
 
+### [index.html](https://kongzhidea.github.io/static/qrcode/index.html)
+
+```
+原理：直接采用淘宝接口：
+    http://ma.taobao.com/api/qrcode.html?sec=qr&activity=encode&text={}&width=180&height=180&ecLevel=L&characterSet=gbk&t={}
+参数：
+    text：二维码内容，可以使链接，需要urlencode
+    t可以采用时间戳，防止url缓存
+```
+
